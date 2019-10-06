@@ -1,0 +1,20 @@
+print("Input some integers to calculate their sum and average. Input 0 to exit.")
+nums = []
+i = 1
+
+while i == 1:
+    num = int(input('Enter a number:\n'))
+
+    if num != 0:
+        nums.append(num)
+
+    elif num == 0 and sum(nums) == 0:
+        print('You did not enter any numbers!')
+        i = 0
+
+    else:
+        i = 0
+        total = float(sum(nums))
+        avg = (total / (len(nums)))
+        print('The Sum of the above numbers is:', total)
+        print('The Average of the above numbers: %0.2f' % avg)
